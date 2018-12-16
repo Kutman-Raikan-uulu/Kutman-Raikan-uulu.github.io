@@ -22,11 +22,11 @@
     flex-wrap: wrap;
   }
   
-  nav ul li {
+ ul li {
     text-align: center;
   }
   
-  nav ul li a {
+ul li a {
     display: block;
     padding: 0 15px;
     line-height: var(--nav-height);
@@ -36,7 +36,7 @@
     font-size: 1.2em;
     transition: transform .2s ease-in;
   }
-  nav ul li a:hover {
+ ul li a:hover {
     transform: scale(1.3);
   }
   nav ul li a.active {
