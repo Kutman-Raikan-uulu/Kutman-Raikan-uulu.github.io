@@ -56,3 +56,20 @@
   .active {
       text-decoration: none;
   }
+  header {
+    width: var(--max-width);
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2em;
+  }
+  
+  section#content {
+    width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+  }
+  
+  section#content ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
