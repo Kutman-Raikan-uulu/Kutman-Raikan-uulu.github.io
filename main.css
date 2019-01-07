@@ -224,14 +224,12 @@ section#content ul {
     background-color: rgba(0, 0, 0, 0.65);
     position: fixed; /* фиксированное поцизионирование */
     cursor: default; /* тип курсара */
-    overflow-x: hidden;
-    overflow-y: auto;
+  
 }
 /* активируем слой затемнения */
 .overlay:target {
     display: block;
-    overflow-x: hidden;
-    overflow-y: auto;
+   
 }
 /* стили модального окна */
 .popup {
@@ -268,6 +266,9 @@ section#content ul {
     -moz-transition: -moz-transform 0.6s ease-out;
     -o-transition: -o-transform 0.6s ease-out;
     transition: transform 0.6s ease-out;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 350px;
 }
 /* активируем модальный блок */
 .overlay:target+.popup {
@@ -276,11 +277,12 @@ section#content ul {
     -o-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
     top: 20%;
+    
 }
 /* формируем кнопку закрытия */
 .close {
-    top: -10px;
-    right: -10px;
+    top: 0px;
+    left: 0px;
     width: 20px;
     height: 20px;
     position: absolute;
