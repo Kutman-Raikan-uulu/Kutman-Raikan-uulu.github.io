@@ -224,10 +224,14 @@ section#content ul {
     background-color: rgba(0, 0, 0, 0.65);
     position: fixed; /* фиксированное поцизионирование */
     cursor: default; /* тип курсара */
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 /* активируем слой затемнения */
 .overlay:target {
     display: block;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 /* стили модального окна */
 .popup {
