@@ -45,7 +45,7 @@ h1 {
     font-size: 2em;
 }
 .back {
-    width: 80%;
+    width: 70%;
     height: 100%;
     margin-left: 10%;
     border-radius: 5px;
@@ -76,14 +76,14 @@ font-family: 'Raleway', sans-serif;
 }
 
 nav {
-margin-left: 85%;
+margin-left: 75%;
 margin-top: 5%px;
 position: absolute;
 width: 90px;
-min-width: 180px;
+min-width: 160px;
 height: 500px;
 }
-@media
+
 
 nav h2 {
 border-radius: 7px;
@@ -188,7 +188,7 @@ ul li a:hover {
 }
 
 .back {
-    width: 80%;
+    width: 60%;
     height: 100%;
     margin-left: 10%;
     border-radius: 5px;
