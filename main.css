@@ -83,6 +83,7 @@ width: 90px;
 min-width: 180px;
 height: 500px;
 }
+@media
 
 nav h2 {
 border-radius: 7px;
@@ -391,4 +392,8 @@ border-radius: 6px;
 }
 #block5 {
     display: none;
+}
+p {
+    font-family: 'Helvetica';
+    font-size: 1.4em;
 }
