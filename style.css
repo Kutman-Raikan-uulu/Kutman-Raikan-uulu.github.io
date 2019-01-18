@@ -621,18 +621,17 @@ background-color: white;
 border-radius: 6px;
 font-family: 'Crimson Text';
 }
-#block1 {
+nav a.active,
+nav a:active,
+nav a:focus {
+  text-decoration: none;
+}
+article {
+    display: none;
+  }
+.active {
     display: block;
-}
-#block2 {
-    display: none;
-}
-#block3 {
-    display: none;
-}
-#block4 {
-    display: none;
-}
-#block5 {
-    display: none;
-}
+  }
+  link {
+     font-size: 1em;
+  }
