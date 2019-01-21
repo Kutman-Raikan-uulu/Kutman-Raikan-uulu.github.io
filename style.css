@@ -4,7 +4,9 @@
  */
  body{
      background-color: white;
-     background-image: url(aqua.jpg);
+     background-image: url(inwall.png);
+     background-repeat: no-repeat;
+     background-size: 100%;
      font-family: 'Kalam', cursive;
      font-size: 1.6rem;
  }
@@ -27,9 +29,12 @@
     -moz-transition: left 0.6s;
     transition: left 0.6s;
     /* определяем цвет фона панели */
-     background-image: url(aqua.jpg);
+    
+    background-image: url(inwall.png);
+    background-repeat: no-repeat;
+    background-size: 1000%;
     /* поверх других элементов */
-    z-index: 2000;
+    
 }
  
 /**
@@ -169,6 +174,10 @@ body {
 @media screen and (max-width: 320px) {
     html,
     body {
+        background-image: url(inwall.png);
+        background-repeat: no-repeat;
+        background-size: 300%;
+        font-family: 'Kalam', cursive;
       margin: 0;
       overflow-x: hidden;
     }
@@ -373,7 +382,7 @@ body {
  * просто раскомментируйте
 */
  
-/*
+
 .mask-content {
     display: block;
     position: fixed;
@@ -393,7 +402,7 @@ body {
     -webkit-transition: opacity .5s, visibility .5s;
     transition: opacity .5s, visibility .5s;
 }
-*/
+
 .shadow {
     font-family: 'Courgette', cursive;
     font-size: 1.5rem; 
@@ -401,12 +410,14 @@ body {
     color: white;
 }
 .block {
+    font-family: 'Hind Madurai', sans-serif;
     text-align: center;
     margin-left: 20%;
     width:60%;
     border-radius: 5px;
     box-shadow:0 0 10px rgba(14, 13, 13, 0.5);
     background-color: white;
+    font-size: 1em;
 }
 .hr {
     text-align: center;
@@ -635,3 +646,8 @@ article {
   link {
      font-size: 1em;
   }
+
+p {
+    padding:20px;
+}
+ 
