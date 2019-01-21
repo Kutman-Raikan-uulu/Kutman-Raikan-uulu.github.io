@@ -14,14 +14,7 @@
      body {
         background-size: 800%;
      }
-     .block {
-         width: 200%;
-         margin-left:10%;
-     }
-     .active {
-         width: 90%;
-     }
- }
+   
 .nav {
     /*  ширна произвольная, не стесняйтесь экспериментировать */
     width: 260px;
@@ -453,6 +446,32 @@ footer {
     font-size: .6em;
 }
 @media only screen and (max-width: 320px) {
+    .col {
+        display: block;
+        width: 100%;
+    }
+    body {
+        font-size: 1.5em;
+    }
+    .shadow {
+        font-size: .8em;
+    }
+    .hr {
+        width:60%;
+
+    }
+    .block {
+        font-size: .7em;
+        padding: 0px;
+        
+        width: 90%;
+        margin-left: 5%;
+    }
+    .nav-toggle {
+        top:0px;
+    }
+}
+@media only screen and (max-width: 768px) {
     .col {
         display: block;
         width: 100%;
