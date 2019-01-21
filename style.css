@@ -10,6 +10,18 @@
      font-family: 'Kalam', cursive;
      font-size: 1.6rem;
  }
+ @media only screen and (max-width:1024px){
+     body {
+        background-size: 800%;
+     }
+     .block {
+         width: 200%;
+         margin-left:10%;
+     }
+     .active {
+         width: 90%;
+     }
+ }
 .nav {
     /*  ширна произвольная, не стесняйтесь экспериментировать */
     width: 260px;
