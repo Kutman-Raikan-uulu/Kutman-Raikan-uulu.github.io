@@ -105,36 +105,36 @@ body {
     padding: 0;
     font-size: 2em;
   }
-ul > li:nth-child(2) {
+  nav > ul > li:nth-child(2) {
     -webkit-transition: opacity .5s .2s, -webkit-transform .5s .2s;
     transition: opacity .5s .2s, transform .5s .2s;
 }
  
-ul > li:nth-child(3) {
+nav > ul > li:nth-child(3) {
     -webkit-transition: opacity .5s .3s, -webkit-transform .5s .3s;
     transition: opacity .5s .3s, transform .5s .3s;
 }
  
-ul > li:nth-child(4) {
+nav > ul > li:nth-child(4) {
     -webkit-transition: opacity .5s .4s, -webkit-transform .5s .4s;
     transition: opacity .5s .4s, transform .5s .4s;
 }
  
-ul > li:nth-child(5) {
+nav > ul > li:nth-child(5) {
     -webkit-transition: opacity .5s .5s, -webkit-transform .5s .5s;
     transition: opacity .5s .5s, transform .5s .5s;
 }
  
-ul > li:nth-child(6) {
+nav > ul > li:nth-child(6) {
     -webkit-transition: opacity .5s .6s, -webkit-transform .5s .6s;
     transition: opacity .5s .6s, transform .5s .6s;
 }
  
-ul > li:nth-child(7) {
+nav > ul > li:nth-child(7) {
     -webkit-transition: opacity .5s .7s, -webkit-transform .5s .7s;
     transition: opacity .5s .7s, transform .5s .7s;
 }
-ul > li > a {
+nav > ul > li > a {
     display: inline-block;
     position: relative;
     padding: 5px;
@@ -149,8 +149,8 @@ ul > li > a {
     -moz-transition: color .5s ease, padding .5s ease;
     transition: color .5s ease, padding .5s ease;
 }
-ul > li > a:hover,
-ul > li > a:focus {
+nav > ul > li > a:hover,
+nav > ul > li > a:focus {
     color: white;
     padding-left: 15px;
 }
@@ -159,7 +159,7 @@ ul > li > a:focus {
  * линия подчеркивания ссылок меню
  */
  
-ul > li > a:before {
+ nav > ul > li > a:before {
     content: '';
     display: block;
     position: absolute;
@@ -171,7 +171,7 @@ ul > li > a:before {
     transition: width 0s ease;
 }
  
-ul > li > a:after {
+nav > ul > li > a:after {
     content: '';
     display: block;
     position: absolute;
@@ -189,14 +189,14 @@ ul > li > a:after {
  * ссылок при наведении
  */
  
-ul > li > a:hover:before {
+nav > ul > li > a:hover:before {
     width: 0%;
     background: #3bc1a0;
     -webkit-transition: width .5s ease;
     transition: width .5s ease;
 }
  
-ul > li > a:hover:after {
+nav > ul > li > a:hover:after {
     width: 0%;
     background: transparent;
     -webkit-transition: width 0s ease;
@@ -455,5 +455,5 @@ link {
 
 p {
   padding:20px;
-  font-size: 
+  font-size: 1.2em;
 }
