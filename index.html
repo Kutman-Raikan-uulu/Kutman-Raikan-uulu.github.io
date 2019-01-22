@@ -1,141 +1,137 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1"> 
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Caveat|Courgette|Crimson+Text|Kalam|Kaushan+Script|Lobster|Lobster+Two|Open+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Hind+Madurai|Karla|Lato|Noto+Serif" rel="stylesheet">
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Caveat|Courgette|Crimson+Text|Kalam|Kaushan+Script|Lobster|Lobster+Two|Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Hind+Madurai|Karla|Lato|Noto+Serif" rel="stylesheet">
 </head>
 <body>
-    <input type="checkbox" id="nav-toggle" hidden>
-    <nav class="nav">
-            <!-- 
-        Метка с именем `id` чекбокса в `for` атрибуте
-        Символ Unicode 'TRIGRAM FOR HEAVEN' (U+2630)
-        Пустой атрибут `onclick` используем для исправления бага в iOS < 6.0
-        См: http://timpietrusky.com/advanced-checkbox-hack 
-        -->
-            <label for="nav-toggle" class="nav-toggle" onclick=""></label>
-            <!-- 
-        Здесь размещаете любую разметку,
-        если это меню, то скорее всего неупорядоченный список <ul>
-        -->
-            <h2 class="logo" style="color:white;"> 
-               Kutman
-            </h2>
-            <ul>
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about-me">About me</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact-us">Contact Us</a></li>
-                 </ul>
-        </nav>
-        <section>
+  
+<input type="checkbox" id="hmt" class="hidden-menu-ticker">
+<label class="btn-menu" for="hmt">
+  <span class="first"></span>
+  <span class="second"></span>
+  <span class="third"></span>
+</label>
+  
+<div class="hidden-menu-wrapper">
+  <label class="hidden-menu-overlay" for="hmt"></label>
+  <nav>
+    <ul class="hidden-menu">
+      <h2 class="logo" style="color:white;"> 
+              Kutman
+           </h2>
+  <li><a href="#home" class="active">Home</a></li>
+  <li><a href="#about-me">About me</a></li>
+  <li><a href="#services">Services</a></li>
+  <li><a href="#portfolio">Portfolio</a></li>
+  <li><a href="#contact-us">Contact Us</a></li> 
+</ul>
+  </nav>
+</div>
+  
+<section>
 
-            <article id="home" class="active">
+  <article id="home" class="active">
 
-                    <header class="shadow"><h1 align="center">Welcome</h1></header>
-                    <hr class="hr">
-                    <div class="block">
-                        <img src="image.jpg" alt="" style="width:25%; padding-top:25px;">
-                        <p>I'm Kutman Raikan uulu, software developer, working in web development. If you have a project that needs some creative injection then that’s where I come in! 
-                        </p>
-                        <p>My job is to build your website so that it is functional and user-friendly but at the same time attractive. Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring across your message and identity in the most creative way.
-                        </p>
-                     
-                    </div>
-       
-            </article>
-                
-            
-            <article id="about-me">
-               
-                    <header class="shadow"><h1 align="center">About me</h1></header>
-                <div class="block">
-                  
-                    <p>I (Kutman) know that I am special and there's no one else out there that's like me... so enjoy! (smile)
-                    </p>
-                    
-                    
-                    
-                    <p>I was born in Karakol on February 28, 2002. I had a very simple and happy childhood.</p>
-                    
-                    <p>Like my dad, I am introverted and am perfectly happy watching quality movies or using a personal computer during my spare time.
-                    </p>
-                    <a href="#win4" class="button button-orange " >My photo</a>
-                    <a href="#x" class="overlay" id="win4"></a>
-                    <div class="popup">
-                                         
-                        <img class="is-image" src="https://files.adme.ru/files/news/part_84/846160/12865360-99-1000-24f48cbb5a-1484579767.jpg" alt="" />
-                        <img class="is-image" src="http://alaniainform.org/uploads/posts/2017-04/1492622473_17991282_10212428084720963_6634771634724125966_o.jpg" alt="" />
-                        <img class="is-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb4M65zKFAO59bQTIwceXC7vDUwWxgVUXbd8qgsCf3Am73OsEY" alt="" />
-                        <img class="is-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCcc9JqyCzzmCDgxjC4u693i1qImBII9BsMfMuwaz_j7FJBvVn5w" alt="" />
-                    <a class="close" title="Закрыть" href="#close"></a>
-                    </div>
-                    <a href="#x" class="overlay" id="win5"></a>
-                                      <div class="popup">
-                              <img class="is-image" src="paren_anime_kompyuter_slezy_grust_komnata_96990_1366x768.jpg" alt="" />
+          <header class="shadow"><h1>Welcome</h1></header>
+          <hr class="hr">
+          <div class="block">
+              <img src="image.jpg" alt="" style="width:25%; padding-top:25px;">
+              <p>I'm Kutman Raikan uulu, software developer, working in web development. If you have a project that needs some creative injection then that’s where I come in! 
+              </p>
+              <p>My job is to build your website so that it is functional and user-friendly but at the same time attractive. Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring across your message and identity in the most creative way.
+              </p>
+           
+          </div>
 
-                              <a class="close" title="Закрыть" href="#close"></a>
-                                      </div>
-                </div>
-       
-            </article>
-                   
-            <article id="services" >
-                <div>
-                    <header class="shadow"><h1 align="center">Services</h1></header>
-                    <hr class="hr">
-                    <div class="block">
-                        <p>I'm Kutman Raikan uulu, software developer, working in web development. If you have a project that needs some creative injection then that’s where I come in! 
-                        </p>
-                        <p>My job is to build your website so that it is functional and user-friendly but at the same time attractive. Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring across your message and identity in the most creative way.
-                        </p>
-                    </div>
-                </div>
-                
-            </article>
-            
-            <article id="portfolio">
-               
-                    <header class="shadow"><h1 align="center">Portfolio</h1></header>
-                    <hr class="hr">
-                    <div class="block">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, voluptas consequuntur harum est eos labore eius libero reiciendis nihil sequi quod! Minima a aut possimus, repellat ipsam exercitationem corporis sapiente?</p>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, voluptas consequuntur harum est eos labore eius libero reiciendis nihil sequi quod! Minima a aut possimus, repellat ipsam exercitationem corporis sapiente?</p>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, voluptas consequuntur harum est eos labore eius libero reiciendis nihil sequi quod! Minima a aut possimus, repellat ipsam exercitationem corporis sapiente?</p>
-                 
-                    </div>
-          
-            </article>
-            
-            
-            
-            <article id="contact-us">
-            
-                    <header class="shadow"><h1 align="center">Contacts</h1></header>
-                    <hr class="hr">
-                    <div class="block">
-                  
-                            <ul>
-                                <li><a href="https://github.com/Kutman-Raikan-uulu">GitHub</a></li>
-                                <li><a href="https://www.linkedin.com/in/kutman-raykan-uulu-8290b0175/">Linkedin</a></li>
-                                <li><a href="https://mail.google.com/mail/#inbox">gmail</a></li>
-                            </ul>
-                      
-                    </div>
-                
-            </article>
-
-        </section>
-
-
-
+  </article>
       
-        <script src="main.js"></script>
+  
+  <article id="about-me">
+     
+          <header class="shadow"><h1>About me</h1></header>
+      <div class="block">
+        
+          <p>I (Kutman) know that I am special and there's no one else out there that's like me... so enjoy! (smile)
+          </p>
+          
+          
+          
+          <p>I was born in Karakol on February 28, 2002. I had a very simple and happy childhood.</p>
+          
+          <p>Like my dad, I am introverted and am perfectly happy watching quality movies or using a personal computer during my spare time.
+          </p>
+          <a href="#win4" class="button button-orange " >My photo</a>
+          <a href="#x" class="overlay" id="win4"></a>
+          <div class="popup">
+                               
+              <img class="is-image" src="https://files.adme.ru/files/news/part_84/846160/12865360-99-1000-24f48cbb5a-1484579767.jpg" alt="" />
+              <img class="is-image" src="http://alaniainform.org/uploads/posts/2017-04/1492622473_17991282_10212428084720963_6634771634724125966_o.jpg" alt="" />
+              <img class="is-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb4M65zKFAO59bQTIwceXC7vDUwWxgVUXbd8qgsCf3Am73OsEY" alt="" />
+              <img class="is-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCcc9JqyCzzmCDgxjC4u693i1qImBII9BsMfMuwaz_j7FJBvVn5w" alt="" />
+          <a class="close" title="Закрыть" href="#close"></a>
+          </div>
+          <a href="#x" class="overlay" id="win5"></a>
+                            <div class="popup">
+                    <img class="is-image" src="paren_anime_kompyuter_slezy_grust_komnata_96990_1366x768.jpg" alt="" />
+
+                    <a class="close" title="Закрыть" href="#close"></a>
+                            </div>
+      </div>
+
+  </article>
+         
+  <article id="services" >
+      <div>
+          <header class="shadow"><h1>Services</h1></header>
+          <hr class="hr">
+          <div class="block">
+              <p>I'm Kutman Raikan uulu, software developer, working in web development. If you have a project that needs some creative injection then that’s where I come in! 
+              </p>
+              <p>My job is to build your website so that it is functional and user-friendly but at the same time attractive. Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring across your message and identity in the most creative way.
+              </p>
+          </div>
+      </div>
+      
+  </article>
+  
+  <article id="portfolio">
+     
+          <header class="shadow"><h1>Portfolio</h1></header>
+          <hr class="hr">
+          <div class="block">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, voluptas consequuntur harum est eos labore eius libero reiciendis nihil sequi quod! Minima a aut possimus, repellat ipsam exercitationem corporis sapiente?</p>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, voluptas consequuntur harum est eos labore eius libero reiciendis nihil sequi quod! Minima a aut possimus, repellat ipsam exercitationem corporis sapiente?</p>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, voluptas consequuntur harum est eos labore eius libero reiciendis nihil sequi quod! Minima a aut possimus, repellat ipsam exercitationem corporis sapiente?</p>
+       
+          </div>
+
+  </article>
+  
+  
+  
+  <article id="contact-us">
+  
+          <header class="shadow"><h1 align="center"><h1>Contacts</h1></header>
+          <hr class="hr">
+          <div class="block">
+        
+                  <ul>
+                      <li><a href="https://github.com/Kutman-Raikan-uulu">GitHub</a></li>
+                      <li><a href="https://www.linkedin.com/in/kutman-raykan-uulu-8290b0175/">Linkedin</a></li>
+                      <li><a href="https://mail.google.com/mail/#inbox">gmail</a></li>
+                  </ul>
+            
+          </div>
+      
+  </article>
+
+</section>
+
+  
 </body>
 </html>

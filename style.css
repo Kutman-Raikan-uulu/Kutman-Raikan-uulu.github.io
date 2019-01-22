@@ -1,323 +1,146 @@
-/**
- * Переключаемая боковая панель навигации
- * выдвигающаяся по клику слева
- */
- body{
-     background-color: white;
-     background-image: url(inwall.png);
-     background-repeat: no-repeat;
-     background-size: 100%;
-     font-family: 'Kalam', cursive;
-     font-size: 1.6rem;
- }
- @media only screen and (max-width:1024px){
-     body {
-        background-size: 800%;
-     }
-     .block {
-         width: 90%;
-         margin-left:10%;
-     }
- }
-.nav {
-    /*  ширна произвольная, не стесняйтесь экспериментировать */
-    width: 260px;
-    min-width: 260px;
-    /* фиксируем и выставляем высоту панели на максимум */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'sans serif';
+    font-size: 12pt;
+    
+    background-image: url(wall4.jpg);
+    background-repeat: no-repeat;
+    background-size: 1380px 650px;
+    height: 638px;
+  }
+  .hidden-menu {
+    display: block;
+    position: absolute;
+    list-style:none;
+    padding: 10px;
+    margin: 0;
+    box-sizing: border-box;
+    width: 300px;
+    background-color: #eee;
     height: 100%;
-    position: fixed;
+    top: 0;
+    left: -300px;
+    transition: left .2s;
+    z-index: 3;
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+  }
+  .hidden-menu-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
     top: 0;
     bottom: 0;
-    margin: 0;
-    /* сдвигаем (прячем) панель относительно левого края страницы */
-    left: -300px;
-    /* внутренние отступы */
-    padding: 15px 20px;
-    /* плавный переход смещения панели */
-    -webkit-transition: left 0.6s;
-    -moz-transition: left 0.6s;
-    transition: left 0.6s;
-    /* определяем цвет фона панели */
-    
-    background-image: url(inwall.png);
-    background-repeat: no-repeat;
-    background-size: 1000%;
-    /* поверх других элементов */
-    
-}
- 
-/**
- * Кнопка переключения панели
- * тег <label>
- */
- 
-.nav-toggle {
-    /* абсолютно позиционируем */
-    position: absolute;
-    /* относительно левого края панели */
-    left: 300px;
-    /* отступ от верхнего края панели */
-    top: 1em;
-    /* внутренние отступы */
-    padding: 0.5em;
-    /* определяем цвет фона переключателя
-     * чаще вчего в соответствии с цветом фона панели
-    */
-    background: inherit;
-    /* цвет текста */
-    color: #dadada;
-    /* вид курсора */
-    cursor: pointer;
-    /* размер шрифта */
-    font-size: 1.2em;
-    line-height: 1;
-    /* всегда поверх других элементов страницы */
-    z-index: 2001;
-    /* анимируем цвет текста при наведении */
-    -webkit-transition: color .5s ease-in-out;
-    -moz-transition: color .5s ease-in-out;
-    transition: color .5s ease-in-out;
-}
- 
-/* определяем текст кнопки 
- * символ Unicode (TRIGRAM FOR HEAVEN)
-*/
- 
-.nav-toggle:after {
-    content: '\2630';
-    text-decoration: none;
-}
- 
-/* цвет текста при наведении */
- 
-.nav-toggle:hover {
-    color: #f4f4f4;
-}
- 
-/**
- * Скрытый чекбокс (флажок)
- * невидим и недоступен :)
- * имя селектора атрибут флажка
- */
- 
-[id='nav-toggle'] {
-    position: absolute;
+    z-index:  2;
+    background-color: rgba(0,0,0,.1);
+  }
+  .hidden-menu-ticker {
     display: none;
-}
- 
-/**
- * изменение положения переключателя 
- * при просмотре на мобильных устройствах
- * когда навигация раскрыта, распологаем внутри панели
-*/
- 
-[id='nav-toggle']:checked ~ .nav > .nav-toggle {
-    left: auto;
-    right: 2px;
-    top: 1em;
-}
- 
-/**
- * Когда флажок установлен, открывается панель
- * используем псевдокласс:checked
- */
- 
-[id='nav-toggle']:checked ~ .nav {
-    left: 0;
-    box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
-    -moz-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
-    -webkit-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
-    overflow-y: auto;
-}
- 
-/* 
- * смещение контента страницы
- * на размер ширины панели,
- * фишка необязательная, на любителя
-*/
- 
-[id='nav-toggle']:checked ~ main > article {
-    -webkit-transform: translateX(30px);
-    -moz-transform: translateX(300px);
-    transform: translateX(280px);
-}
- 
-/*
- * изменение символа переключателя,
- * привычный крестик (MULTIPLICATION X), 
- * вы можете испльзовать любой другой значок
-*/
- 
-[id='nav-toggle']:checked ~ .nav > .nav-toggle:after {
-    content: '\2715';
-}
- 
-/**
- * профиксим баг в Android <= 4.1.2
- * см: http://timpietrusky.com/advanced-checkbox-hack
- */
- 
-body {
-    -webkit-animation: bugfix infinite 1s;
-}
- 
-@-webkit-keyframes bugfix {
-    to {
-      padding: 0;
-    }
-}
- 
-/**
- * позаботьтимся о средних и маленьких экранах
- * мобильных устройств
- */
- 
-@media screen and (min-width: 320px) {
-    html,
-    body {
-      margin: 0;
-      overflow-x: hidden;
-    }
-}
- 
-@media screen and (max-width: 320px) {
-    html,
-    body {
-        background-image: url(inwall.png);
-        background-repeat: no-repeat;
-        background-size: 300%;
-        font-family: 'Kalam', cursive;
-      margin: 0;
-      overflow-x: hidden;
-    }
-    .nav {
-      width: 80%;
-      box-shadow: none
-    }
-}
- 
-/**
- * Формируем стиль заголовка (логотип) панели 
-*/
- 
-.nav h2 {
-    width: 90%;
-    padding: 0;
-    margin: 10px 0;
-    text-align: center;
-    text-shadow: rgba(255, 255, 255, .1) -1px -1px 1px, rgba(0, 0, 0, .5) 1px 1px 1px;
-    font-size: 1.3em;
-    line-height: 1.3em;
-    opacity: 0;
-    transform: scale(0.1, 0.1);
-    -ms-transform: scale(0.1, 0.1);
-    -moz-transform: scale(0.1, 0.1);
-    -webkit-transform: scale(0.1, 0.1);
-    transform-origin: 0% 0%;
-    -ms-transform-origin: 0% 0%;
-    -moz-transform-origin: 0% 0%;
-    -webkit-transform-origin: 0% 0%;
-    transition: opacity 0.8s, transform 0.8s;
-    -ms-transition: opacity 0.8s, -ms-transform 0.8s;
-    -moz-transition: opacity 0.8s, -moz-transform 0.8s;
-    -webkit-transition: opacity 0.8s, -webkit-transform 0.8s;
-}
- 
-.nav h2 a {
-    color: #dadada;
-    text-decoration: none;
-    text-transform: uppercase;
-}
- 
- 
-/*плавное появление заголовка (логотипа) при раскрытии панели */
- 
-[id='nav-toggle']:checked ~ .nav h2 {
-    opacity: 1;
-    transform: scale(1, 1);
-    -ms-transform: scale(1, 1);
-    -moz-transform: scale(1, 1);
-    -webkit-transform: scale(1, 1);
-}
- 
-/**
- * формируем непосредственно само меню
- * используем неупорядоченный список для пунктов меню
- * прикрутим трансфомации и плавные переходы
- */
- 
-.nav > ul {
+  }
+  .btn-menu {
+    color: #fff;
+    background-color: #666;
+    padding: 5px;
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+    transition: left .23s;
+    z-index: 3;
+    width: 25px;
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+  }
+  .btn-menu span {
     display: block;
+    height: 5px;
+    background-color: #fff;
+    margin: 5px 0 0;
+    transition: all .1s linear .23s;
+    position: relative;
+  }
+  .btn-menu span.first {
+    margin-top: 0;
+  }
+  .hidden-menu-wrapper {
+    width: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+  }
+  .hidden-menu-ticker:checked ~ .btn-menu {
+    left: 260px;
+  }
+  .hidden-menu-ticker:checked ~ .hidden-menu-wrapper {
+    width: 100%;
+  }
+  .hidden-menu-ticker:checked ~ .hidden-menu-wrapper .hidden-menu {
+    left: 0;
+  }
+  .hidden-menu-ticker:checked ~ .btn-menu span.first {
+    -webkit-transform: rotate(45deg);
+    top: 10px;
+  }
+  .hidden-menu-ticker:checked ~ .btn-menu span.second {
+    opacity: 0;
+  }
+  
+  .hidden-menu-ticker:checked ~ .btn-menu span.third {
+    -webkit-transform: rotate(-45deg);
+    top: -10px;
+  }
+  header {
+    
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+  }
+  
+  h1 {
     margin: 0;
     padding: 0;
-    list-style: none;
-}
- 
-.nav > ul > li {
-    line-height: 2.5;
-    opacity: 0;
-    -webkit-transform: translateX(-100%);
-    -moz-transform: translateX(-100%);
-    -ms-transform: translateX(-100%);
-    transform: translateX(-100%);
-    -webkit-transition: opacity .5s .1s, -webkit-transform .5s .1s;
-    -moz-transition: opacity .5s .1s, -moz-transform .5s .1s;
-    -ms-transition: opacity .5s .1s, -ms-transform .5s .1s;
-    transition: opacity .5s .1s, transform .5s .1s;
-}
- 
-[id='nav-toggle']:checked ~ .nav > ul > li {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transform: translateX(0);
-}
- 
-/* определяем интервалы появления пунктов меню */
- 
-.nav > ul > li:nth-child(2) {
+    font-size: 2em;
+  }
+ul > li:nth-child(2) {
     -webkit-transition: opacity .5s .2s, -webkit-transform .5s .2s;
     transition: opacity .5s .2s, transform .5s .2s;
 }
  
-.nav > ul > li:nth-child(3) {
+ul > li:nth-child(3) {
     -webkit-transition: opacity .5s .3s, -webkit-transform .5s .3s;
     transition: opacity .5s .3s, transform .5s .3s;
 }
  
-.nav > ul > li:nth-child(4) {
+ul > li:nth-child(4) {
     -webkit-transition: opacity .5s .4s, -webkit-transform .5s .4s;
     transition: opacity .5s .4s, transform .5s .4s;
 }
  
-.nav > ul > li:nth-child(5) {
+ul > li:nth-child(5) {
     -webkit-transition: opacity .5s .5s, -webkit-transform .5s .5s;
     transition: opacity .5s .5s, transform .5s .5s;
 }
  
-.nav > ul > li:nth-child(6) {
+ul > li:nth-child(6) {
     -webkit-transition: opacity .5s .6s, -webkit-transform .5s .6s;
     transition: opacity .5s .6s, transform .5s .6s;
 }
  
-.nav > ul > li:nth-child(7) {
+ul > li:nth-child(7) {
     -webkit-transition: opacity .5s .7s, -webkit-transform .5s .7s;
     transition: opacity .5s .7s, transform .5s .7s;
 }
- 
- 
-/**
- * оформление ссылок пунктов меню
- */
- 
-.nav > ul > li > a {
+ul > li > a {
     display: inline-block;
     position: relative;
-    padding: 0;
+    padding: 5px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
-    font-size: 1.2em;
+    font-size: 2em;
     color: #dadada;
     width: 100%;
     text-decoration: none;
@@ -326,13 +149,8 @@ body {
     -moz-transition: color .5s ease, padding .5s ease;
     transition: color .5s ease, padding .5s ease;
 }
- 
-/**
- * состояние ссылок меню при наведении
- */
- 
-.nav > ul > li > a:hover,
-.nav > ul > li > a:focus {
+ul > li > a:hover,
+ul > li > a:focus {
     color: white;
     padding-left: 15px;
 }
@@ -341,7 +159,7 @@ body {
  * линия подчеркивания ссылок меню
  */
  
-.nav > ul > li > a:before {
+ul > li > a:before {
     content: '';
     display: block;
     position: absolute;
@@ -353,7 +171,7 @@ body {
     transition: width 0s ease;
 }
  
-.nav > ul > li > a:after {
+ul > li > a:after {
     content: '';
     display: block;
     position: absolute;
@@ -371,263 +189,242 @@ body {
  * ссылок при наведении
  */
  
-.nav > ul > li > a:hover:before {
+ul > li > a:hover:before {
     width: 0%;
     background: #3bc1a0;
     -webkit-transition: width .5s ease;
     transition: width .5s ease;
 }
  
-.nav > ul > li > a:hover:after {
+ul > li > a:hover:after {
     width: 0%;
     background: transparent;
     -webkit-transition: width 0s ease;
     transition: width 0s ease;
 }
- 
-/* фон затемнения на основной контент 
- * при этом элементы блокируютя
- * спорная такая фича, если оно вам надо
- * просто раскомментируйте
-*/
- 
-
-.mask-content {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    visibility: hidden;
-    opacity: 0;
-}
- 
-[id='nav-toggle']:checked ~ .mask-content {
-    visibility: visible;
-    opacity: 1;
-    -webkit-transition: opacity .5s, visibility .5s;
-    transition: opacity .5s, visibility .5s;
+ ul {
+     padding-top:20px;
+ }
+ [id='nav-toggle']:checked ~ .mask-content {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: opacity .5s, visibility .5s;
+  transition: opacity .5s, visibility .5s;
 }
 
 .shadow {
-    font-family: 'Courgette', cursive;
-    font-size: 1.5rem; 
-    text-shadow: 0 -2px 20px rgba(14, 24, 24, 0.9);
-    color: white;
+  font-family: 'Courgette', cursive;
+  font-size: 1.5rem; 
 }
 .block {
-    font-family: 'Hind Madurai', sans-serif;
-    text-align: center;
-    margin-left: 20%;
-    width:60%;
-    border-radius: 5px;
-    box-shadow:0 0 10px rgba(14, 13, 13, 0.5);
-    background-color: white;
-    font-size: 1em;
+  font-family: 'Hind Madurai', sans-serif;
+  text-align: center;
+  margin-left: 20%;
+  width:60%;
+  border-radius: 5px;
+  box-shadow:0 0 10px rgba(14, 13, 13, 0.5);
+  font-size: 1em;
 }
 .hr {
-    text-align: center;
-    width: 30%;
-    margin-top: -20px;
-    margin-bottom: 40px;
+  text-align: center;
+  width: 30%;
+  margin-top: -20px;
+  margin-bottom: 40px;
 }
 footer {
-    background-color: whitesmoke;
-    width: 100%;
-    border-radius: 3px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    margin-top: 200px;
-    color:black; 
+  background-color: whitesmoke;
+  width: 100%;
+  border-radius: 3px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin-top: 200px;
+  color:black; 
 }
 .col {
-    display: inline-block;
-    width: 15%;
-    padding: 4%;
-    font-size: .6em;
+  display: inline-block;
+  width: 15%;
+  padding: 4%;
+  font-size: .6em;
 }
 @media only screen and (max-width: 320px) {
-    .col {
-        display: block;
-        width: 100%;
-    }
-    body {
-        font-size: 1.5em;
-    }
-    .shadow {
-        font-size: .8em;
-    }
-    .hr {
-        width:60%;
+  .col {
+      display: block;
+      width: 100%;
+  }
+  body {
+      font-size: 1.5em;
+  }
+  .shadow {
+      font-size: .8em;
+  }
+  .hr {
+      width:60%;
 
-    }
-    .block {
-        font-size: .7em;
-        padding: 0px;
-        
-        width: 90%;
-        margin-left: 5%;
-    }
-    .nav-toggle {
-        top:0px;
-    }
+  }
+  .block {
+      font-size: .7em;
+      padding: 0px;
+      
+      width: 90%;
+      margin-left: 5%;
+  }
+  .nav-toggle {
+      top:0px;
+  }
 }
 p {
-    padding: 0px;
+  padding: 0px;
 }
 .overlay {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 10;
-    display: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  display: none;
 /* фон затемнения */
-    background-color: rgba(0, 0, 0, 0.65);
-    position: fixed; /* фиксированное поцизионирование */
-    cursor: default; /* тип курсара */
-  
+  background-color: rgba(0, 0, 0, 0.65);
+  position: fixed; /* фиксированное поцизионирование */
+  cursor: default; /* тип курсара */
+
 }
 /* активируем слой затемнения */
 .overlay:target {
-    display: block;
-   
+  display: block;
+ 
 }
 /* стили модального окна */
 .popup {
-    top: -100%;
-    right: 0;
-    left: 50%;
-    font-size: 14px;
-    z-index: 20;
-    margin: 0;
-    width: 85%;
-    min-width: 320px;
-    max-width: 600px;
+  top: -100%;
+  right: 0;
+  left: 50%;
+  font-size: 14px;
+  z-index: 20;
+  margin: 0;
+  width: 85%;
+  min-width: 320px;
+  max-width: 600px;
 /* фиксированное позиционирование, окно стабильно при прокрутке */
-    position: absolute;
-    padding: 15px;
-    border: 1px solid #383838;
-    background: #fefefe;
+  position: absolute;
+  padding: 15px;
+  border: 1px solid #383838;
+  background: #fefefe;
 /* скругление углов */
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    border-radius: 4px;
-    font: 14px/18px 'Tahoma', Arial, sans-serif;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  font: 14px/18px 'Tahoma', Arial, sans-serif;
 /* внешняя тень */
-    -webkit-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
-    -moz-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
-    -ms-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
-    box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
-    -webkit-transform: translate(-50%, -500%);
-    -ms-transform: translate(-50%, -500%);
-    -o-transform: translate(-50%, -500%);
-    transform: translate(-50%, -500%);
-    -webkit-transition: -webkit-transform 0.6s ease-out;
-    -moz-transition: -moz-transform 0.6s ease-out;
-    -o-transition: -o-transform 0.6s ease-out;
-    transition: transform 0.6s ease-out;
-  
-  
+  -webkit-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+  -moz-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+  -ms-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+  box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+  -webkit-transform: translate(-50%, -500%);
+  -ms-transform: translate(-50%, -500%);
+  -o-transform: translate(-50%, -500%);
+  transform: translate(-50%, -500%);
+  -webkit-transition: -webkit-transform 0.6s ease-out;
+  -moz-transition: -moz-transform 0.6s ease-out;
+  -o-transition: -o-transform 0.6s ease-out;
+  transition: transform 0.6s ease-out;
+
+
 }
 /* активируем модальный блок */
 .overlay:target+.popup {
-    -webkit-transform: translate(-50%, 0);
-    -ms-transform: translate(-50%, 0);
-    -o-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
-    top: 20%;
-    
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  top: 20%;
+  
 }
 /* формируем кнопку закрытия */
 .close {
-    top: -10px;
-    right: -10px;
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    padding: 0;
-    border: 2px solid #ccc;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
-    border-radius: 15px;
-    background-color: rgba(61, 61, 61, 0.8);
-    -webkit-box-shadow: 0px 0px 10px #000;
-    -moz-box-shadow: 0px 0px 10px #000;
-    box-shadow: 0px 0px 10px #000;
-    text-align: center;
-    text-decoration: none;
-    font: 13px/20px 'Tahoma', Arial, sans-serif;
-    font-weight: bold;
-    -webkit-transition: all ease .8s;
-    -moz-transition: all ease .8s;
-    -ms-transition: all ease .8s;
-    -o-transition: all ease .8s;
-    transition: all ease .8s;
+  top: -10px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  padding: 0;
+  border: 2px solid #ccc;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
+  background-color: rgba(61, 61, 61, 0.8);
+  -webkit-box-shadow: 0px 0px 10px #000;
+  -moz-box-shadow: 0px 0px 10px #000;
+  box-shadow: 0px 0px 10px #000;
+  text-align: center;
+  text-decoration: none;
+  font: 13px/20px 'Tahoma', Arial, sans-serif;
+  font-weight: bold;
+  -webkit-transition: all ease .8s;
+  -moz-transition: all ease .8s;
+  -ms-transition: all ease .8s;
+  -o-transition: all ease .8s;
+  transition: all ease .8s;
 }
 .close:before {
-    color: rgba(255, 255, 255, 0.9);
-    content: "X";
-    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
-    font-size: 12px;
+  color: rgba(255, 255, 255, 0.9);
+  content: "X";
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+  font-size: 12px;
 }
 .close:hover {
-    background-color: rgba(252, 20, 0, 0.8);
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);    
+  background-color: rgba(252, 20, 0, 0.8);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);    
 }
 /* изображения внутри окна */
 .popup img {
-   
-    width: 48%;
-    height: 50%;
+ 
+  width: 48%;
+  height: 50%;
 }
 /* миниатюры слева/справа */
 .pic-left, 
 .pic-right {
-    width: 25%;
-    height: auto;
+  width: 25%;
+  height: auto;
 }
 .pic-left {
-    float: left;
-    margin: 5px 15px 5px 0;
+  float: left;
+  margin: 5px 15px 5px 0;
 }
 .pic-right {
-    float: right;
-    margin: 5px 0 5px 15px;
+  float: right;
+  margin: 5px 0 5px 15px;
 }
 /* элементы м-медиа, фреймы */
 .popup embed, 
 .popup iframe {
-    top: 0;
-    right: 0;
-    bottom: 0; 
-    left: 0; 
-    display:block;
-    margin: auto;
-    min-width: 320px;
-    max-width: 600px;
-    width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0; 
+  left: 0; 
+  display:block;
+  margin: auto;
+  min-width: 320px;
+  max-width: 600px;
+  width: 100%;
 }
 .popup h2 { /* заголовок 2 */
-    margin: 0;
-    color: #008000;
-    padding: 5px 0px 10px;
-    text-align: left;
-    text-shadow: 1px 1px 3px #adadad;
-    font-weight: 500;
-    font-size: 1.4em;
-    font-family: 'Tahoma', Arial, sans-serif;
-    line-height: 1.3;
+  margin: 0;
+  color: #008000;
+  padding: 5px 0px 10px;
+  text-align: left;
+  text-shadow: 1px 1px 3px #adadad;
+  font-weight: 500;
+  font-size: 1.4em;
+  font-family: 'Tahoma', Arial, sans-serif;
+  line-height: 1.3;
 }
 /* параграфы */
 .popup p {margin: 0; padding: 5px 0}
@@ -644,19 +441,19 @@ font-family: 'Crimson Text';
 nav a.active,
 nav a:active,
 nav a:focus {
-  text-decoration: none;
+text-decoration: none;
 }
 article {
-    display: none;
-  }
+  display: none;
+}
 .active {
-    display: block;
-  }
-  link {
-     font-size: 1em;
-  }
+  display: block;
+}
+link {
+   font-size: 1em;
+}
 
 p {
-    padding:20px;
+  padding:20px;
+  font-size: 
 }
- 
