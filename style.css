@@ -6,8 +6,7 @@ body {
     
     background-image: url(wall4.jpg);
     background-repeat: no-repeat;
-    background-size: 1380px 650px;
-    height: 638px;
+    background-size: 1380px auto;
   }
   .hidden-menu {
     display: block;
@@ -17,7 +16,7 @@ body {
     margin: 0;
     box-sizing: border-box;
     width: 300px;
-    background-color: #eee;
+    background-color: rgb(211, 209, 209);
     height: 100%;
     top: 0;
     left: -300px;
@@ -94,13 +93,14 @@ body {
     top: -10px;
   }
   header {
-    
+    font-family: 'Philosopher', sans-serif;
     color: #fff;
     text-align: center;
     padding: 5px;
   }
   
   h1 {
+    font-family: 'Prociono', serif;
     margin: 0;
     padding: 0;
     font-size: 2em;
@@ -455,5 +455,5 @@ link {
 
 p {
   padding:20px;
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
