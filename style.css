@@ -4,9 +4,8 @@ body {
     font-family: 'sans serif';
     font-size: 12pt;
     
-    background-image: url(wall4.jpg);
+    background-image: url(header-background.jpg);
     background-repeat: no-repeat;
-    background-size: 1380px auto;
   }
   .hidden-menu {
     display: block;
@@ -16,7 +15,7 @@ body {
     margin: 0;
     box-sizing: border-box;
     width: 300px;
-    background-color: lightslategray;
+    background-color: rgb(39, 27, 27);
     height: 100%;
     top: 0;
     left: -300px;
@@ -453,7 +452,7 @@ link {
 }
 
 p {
-  color: rgb(88, 25, 0);
+  color:white;
   padding:20px;
   font-size: 1.3em;
 }
