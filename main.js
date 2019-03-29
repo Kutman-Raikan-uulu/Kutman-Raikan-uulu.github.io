@@ -10,13 +10,14 @@ navLinks.forEach(function(navLink) {
     const urlParts = activeLink.href.split("#");
     const afterHashtag = urlParts.pop();
     const oldArticle = document.getElementById(afterHashtag);
-    oldArticle.className = "";
+    oldArticle.className = "active";
 
+    activeLink.className = "";
     // Set new page
     activeLink = this;
 
     // Activate new page
-    activeLink.className = "content-active";
+    activeLink.className = "active";
     document.getElementById(activeLink.href.split("#").pop()).className =
       "content-active";
 
