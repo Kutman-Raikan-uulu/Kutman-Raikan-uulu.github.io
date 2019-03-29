@@ -26,7 +26,7 @@ navLinks.forEach(function(navLink) {
 });
 
 $(document).ready(function() {
-  $(".menu-icon").on("click", function() {
+  $(".menu-icon, nav ul").on("click", function() {
     $("nav ul").toggleClass("showing");
   });
 });
