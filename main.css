@@ -84,13 +84,15 @@ nav ul li a {
   width: 40px;
 }
 .col {
-  width: 50%;
+  width: 25%;
   float: left;
   margin: 1.5em 0;
   display: inline-block;
+  text-align: center;
 }
 h3 {
-  display: inline-block;
+  display: block;
+  margin-top: 0px;
 }
 .col a {
   text-decoration: none;
