@@ -8,13 +8,32 @@ body {
 body {
   font-family: Quicksand;
 }
+.home-bg {
+  background: url(bg.jpg);
+  background-size: cover;
+}
+.about-me-bg {
+  background: url(bg2.jpg);
+  background-size: cover;
+}
+.contact-us-bg {
+  background: url(bg3.jpg);
+  background-size: cover;
+}
+.services-bg {
+  background: url(bg4.jpg);
+  background-size: cover;
+}
+.portfolio-bg {
+  background: url(bg5.jpg);
+  background-size: cover;
+}
 
 header {
   width: 100%;
   height: 100vh;
-  background: url(bg.jpg);
-  background-size: cover;
 }
+
 .content {
   height: 500px;
   width: 70%;
@@ -100,7 +119,7 @@ h3 {
   padding: -0.3em -0.4em;
 }
 .active {
-  background: #151515;
+  background: #7c7c7c;
   border-radius: 3px;
   padding: 3px;
 }
@@ -154,11 +173,11 @@ h3 {
 }
 footer {
   height: 224px;
-  background: #151515;
-  z-index: 20;
+  background: #000;
+  z-index: 0;
 }
 .icon {
-  width: 40px;
+  width: 60px;
   padding: 0 15px;
 }
 .icons {
@@ -175,4 +194,14 @@ article {
 
 h1 {
   font-size: 40px;
+}
+@media (max-width: 905px) {
+  .content-block {
+    display: inline-block;
+  }
+  .picture {
+    margin-top: -6em;
+    margin-left: 3em;
+    width: 60%;
+  }
 }

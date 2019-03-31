@@ -37,3 +37,6 @@ $(window).on("scroll", function() {
     $("nav").removeClass;
   }
 });
+$(".home-bg").on("click", "a", e =>
+  $("#it").attr("class", $(e.target).attr("id"))
+);
