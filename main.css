@@ -150,6 +150,25 @@ form {
 .register {
   border: 1px solid black;
 }
+@media (max-width: 466px) {
+  form {
+    margin-left: 1em;
+  }
+  input {
+    width: 60%;
+  }
+}
+@media (max-width: 444px) {
+  form {
+    margin-left: 0;
+  }
+}
+@media (max-width: ) {
+  article {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 @media (max-width: 580px) {
   .col {
     width: 50%;
