@@ -131,7 +131,25 @@ h3 {
   height: 100%;
   margin: 7.3em;
 }
+input {
+  border: none;
+  background: #fff;
+  border-bottom: 1px solid black;
+  border-radius: 4px;
+  width: 40%;
+  height: 20px;
+}
+.reg {
+  margin-left: 15%;
+  font: bold;
+}
 
+form {
+  margin-left: 40%;
+}
+.register {
+  border: 1px solid black;
+}
 @media (max-width: 580px) {
   .col {
     width: 50%;
