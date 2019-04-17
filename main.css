@@ -267,14 +267,14 @@ h1 {
   text-transform: uppercase;
   cursor: pointer;
 }
-#jcf button object {
+#jcf .submit object {
   margin: -18px -5px !important;
   width: 50px !important;
 }
 #jcf select,
 #jcf input,
 #jcf textarea,
-#jcf button {
+#jcf .submit {
   outline: none;
   background: none;
   border: solid 1px #505050;
@@ -292,10 +292,14 @@ h1 {
 #jcf select:focus,
 #jcf input:focus,
 #jcf textarea:focus,
-#jcf button:hover {
+#jcf .submit:hover {
   border: solid 1px #0066ff;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 4px;
   width: 100%;
+}
+.submit {
+  text-decoration: none;
+  font-weight: bold;
 }
 .active {
   background: #7c7c7c;
