@@ -118,11 +118,6 @@ h3 {
   color: #000;
   padding: -0.3em -0.4em;
 }
-.active {
-  background: #7c7c7c;
-  border-radius: 3px;
-  padding: 3px;
-}
 
 .picture {
   width: 30%;
@@ -131,25 +126,7 @@ h3 {
   height: 100%;
   margin: 7.3em;
 }
-input {
-  border: none;
-  background: #fff;
-  border-bottom: 1px solid black;
-  border-radius: 4px;
-  width: 40%;
-  height: 20px;
-}
-.reg {
-  margin-left: 15%;
-  font: bold;
-}
 
-form {
-  margin-left: 40%;
-}
-.register {
-  border: 1px solid black;
-}
 @media (max-width: 466px) {
   form {
     margin-left: 1em;
@@ -163,7 +140,7 @@ form {
     margin-left: 0;
   }
 }
-@media (max-width: ) {
+@media (max-width: 420px) {
   article {
     margin-left: 0;
     margin-right: 0;
@@ -211,7 +188,6 @@ form {
 footer {
   height: 224px;
   background: #000;
-  z-index: 0;
 }
 .icon {
   width: 60px;
@@ -219,7 +195,9 @@ footer {
 }
 .icons {
   text-align: center;
-  padding: 90px 40px;
+  padding-top: 90px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 article {
@@ -232,6 +210,7 @@ article {
 h1 {
   font-size: 40px;
 }
+
 @media (max-width: 905px) {
   .content-block {
     display: inline-block;
@@ -241,4 +220,85 @@ h1 {
     margin-left: 3em;
     width: 60%;
   }
+}
+.blocks p {
+  margin-bottom: 15px;
+
+  position: relative;
+}
+
+#jcf * {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  box-sizing: border-box;
+  font-family: "Helvetica";
+}
+#jcf {
+  max-width: 500px;
+}
+#jcf .error {
+  background-color: rgba(255, 184, 185, 0.8) !important;
+  border: solid 1px #d8000c !important;
+}
+#jcf .error,
+#jcf .error::placeholder {
+  color: #d8000c !important;
+}
+#jcf .success {
+  background-color: rgba(193, 255, 198, 0.8) !important;
+  border: solid 1px #044406 !important;
+}
+#jcf .success,
+#jcf .success::placeholder {
+  color: #044406;
+}
+#jcf .msg {
+  display: none;
+  padding: 10px;
+  margin-bottom: 5px !important;
+  width: 99%;
+  border-radius: 3px;
+}
+#jcf .contact_message {
+  height: 200px;
+}
+#jcf #send_message {
+  text-transform: uppercase;
+  cursor: pointer;
+}
+#jcf button object {
+  margin: -18px -5px !important;
+  width: 50px !important;
+}
+#jcf select,
+#jcf input,
+#jcf textarea,
+#jcf button {
+  outline: none;
+  background: none;
+  border: solid 1px #505050;
+  transition: box-shadow 0.2s, width 0.2s;
+  width: 99%;
+  max-width: 99%;
+  min-width: 99%;
+  appearance: none;
+  padding: 10px !important;
+  margin: 0 0 5px !important;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.8);
+  border: solid 1px #505050;
+}
+#jcf select:focus,
+#jcf input:focus,
+#jcf textarea:focus,
+#jcf button:hover {
+  border: solid 1px #0066ff;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 4px;
+  width: 100%;
+}
+.active {
+  background: #7c7c7c;
+  border-radius: 3px;
+  padding: 3px;
 }
