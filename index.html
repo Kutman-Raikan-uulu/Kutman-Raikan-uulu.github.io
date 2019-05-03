@@ -132,29 +132,52 @@
         </div>
       -->
       <div id="jcf">
-        <form action="" method="post" id="contact_form">
-         <select name="topic" id="topic" class="contact_topic">
-          <option value="">Choose an option...</option>
-          <option value="Option 1">Option 1</option>
-          <option value="Option 2">Option 2</option>
-          <option value="Option 3">Option 3</option>
-         </select>
-         <input class="contact_name" type="text" name="name" id="name" placeholder="Name" />
-         <input class="contact_email" type="email" name="email" id="email" placeholder="Email" />
-         <input class="contact_subject" type="text" name="subject" id="subject" placeholder="Subject" />
-         <textarea class="contact_message" name="message" id="message" placeholder="Write your message..."></textarea>
-         <a href="mailto:rajkanuulu@gmail.com" class="submit"  id="send_message" style="height: 43px;">
-         Send Message
-        
-         </a></form>
+        <form action="" method="get">
+          <h3>You can leave your contacts:</h3>
+          <div>
+            <label for="Uname">First name</label>
+            <input type="text" id="name" placeholder="First name" />
+          </div>
+          <div>
+            <label for="Usurname">Last name</label>
+            <input type="text" id="surmane" placeholder="Last name" />
+          </div>
+          <div>
+            <label for="Uaddress">Address</label>
+            <input type="text" id="address" placeholder="Address" />
+          </div>
+          <div>
+            <label for="Uemail">E-mail</label>
+            <input
+              type="email"
+              class="email"
+              id="email"
+              placeholder="Your e-mail"
+              required
+            />
+          </div>
+          <textarea
+            name="comment"
+            id="Ucomment"
+            cols="30"
+            rows="10"
+            placeholder="Write to me your comment"
+          ></textarea>
+          <a href="">Send to me</a>
+        </form>
        </div>
       
       </article>
     </div>
     <footer>
       <div class="icons">
-        <img class="icon" src="./icon/linkedin.svg" alt="linkedin"/>
-        <img class="icon" src="./icon/instagram.svg" alt="instagram"/>
+        <a href="mailto:https://www.linkedin.com/in/kutman-raykan-uulu-8290b0175/">
+          <img class="icon" src="./icon/linkedin.svg" alt="linkedin"/>
+        </a>
+        <a>
+          <img class="icon" src="./icon/instagram.svg" alt="instagram"/>
+        </a>
+        
       </div>
     </footer>
     

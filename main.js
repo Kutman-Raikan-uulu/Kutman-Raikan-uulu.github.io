@@ -2,6 +2,14 @@ const navLinks = document.querySelectorAll("nav a");
 const articles = document.querySelectorAll("content-article");
 
 let activeLink = navLinks[0]; // Home
+let textarea = document.querySelector("form textarea");
+let linkMailto = document.querySelector("form a");
+let inputFocus = document.querySelectorAll("input");
+let label = document.querySelectorAll("label");
+let email = document.querySelector(".email");
+let submitButton = document.querySelector("#submit");
+let downButton = document.querySelector("#down");
+let upButton = document.querySelector("#up");
 
 navLinks.forEach(function(navLink) {
   navLink.addEventListener("click", function(event) {
@@ -17,7 +25,7 @@ navLinks.forEach(function(navLink) {
     activeLink = this;
 
     // Activate new page
-    activeLink.className = "";
+    activeLink.className = "active";
     document.getElementById(activeLink.href.split("#").pop()).className =
       "content-active";
 
@@ -40,111 +48,51 @@ $(window).on("scroll", function() {
 $(".home-bg").on("click", "a", e =>
   $("#it").attr("class", $(e.target).attr("id"))
 );
-$(function() {
-  $("#form").validate({
-    // используем id формы (можно использовать и имя класса)
-    rules: {
-      // описываем правила проверки полей формы
 
-      name: {
-        // указываем имя поля, для которого вводятся правила
+email.addEventListener("change", function() {
+  email.className = "mail";
+});
 
-        required: true, // в поле должно быть введено значение
+for (var i = 0; i < inputFocus.length; i++) {
+  let parentInput = inputFocus[i].parentElement;
 
-        minlength: 3 // устанавливаем минимальную длину значения поля
-      },
+  inputFocus[i].addEventListener("input", function(event) {
+    if (this.value.length > 0) {
+      parentInput.classList.add("visible");
+      parentInput.classList.remove("hidden");
+    } else {
+      parentInput.classList.add("hidden");
+      parentInput.classList.remove("visible");
+    }
 
-      company: {
-        required: true
-      },
-
-      phone: {
-        required: true,
-
-        number: true, // значение поля должно быть десятичным целым числом
-
-        minlength: 6
-      },
-
-      email: {
-        required: true,
-
-        email: true // значение поля должно иметь правильный формат адреса email
-      },
-
-      message: {
-        required: true
-      }
-    },
-
-    messages: {
-      // устанавливаем сообщения для пользователя
-
-      name: {
-        required: "Данное поле должно быть заполнено!",
-
-        minlength: "Минимальная длина: 3"
-      },
-
-      company: {
-        required: "Данное поле должно быть заполнено!"
-      },
-
-      phone: {
-        required: "Данное поле должно быть заполнено!",
-
-        number: "Неправильный формат номера телефона",
-
-        minlength: "Минимальная длина: 6"
-      },
-
-      email: "Неправильный формат адреса e-mail",
-
-      message: {
-        required: "Данное поле должно быть заполнено!"
-      }
-    },
-
-    success: function(label) {
-      // Устанавливаем класс OK для сообщения об ошибке выключаем его через 2 секунды
-
-      label
-        .html("OK")
-        .removeClass("error")
-        .addClass("ok");
-
-      setTimeout(function() {
-        label.fadeOut(500);
-      }, 2000);
+    if (event.path[0].id == "name") {
+      username = this.value;
+    } else if (event.path[0].id == "surname") {
+      userSurname = this.value;
+    } else if (event.path[0].id == "address") {
+      userAddress = this.value;
+    } else if (event.path[0].id == "email") {
+      userEmail = this.value;
     }
   });
-});
-let sendBtn = document.querySelector(".sendBtn");
-sendBtn.addEventListener("click", sendLetter);
-function sendLetter() {
-  const user = {
-    name: document.querySelector("#name").value,
-    email: document.querySelector("#email").value,
-    letter: document.querySelector("#textarea").value
-  };
 
-  if (user.name.length > 5 && user.email.length > 5 && user.letter.length > 5) {
-    axios
-      .post(
-        "https://my-personal-9e097.firebaseio.com/contacts.json",
-        // name: "Islam",
-        // email: "islamsydykov",
-        // letter: "lakjd;fkjas"
-
-        user
-      )
-      .then(response => {
-        alert("Success");
-      })
-      .catch(error => {
-        alert("error");
-      });
-  } else {
-    alert("Fill all the data, please");
-  }
+  inputFocus[i].addEventListener("change", function() {
+    if (this.value.length > 0) {
+      parentInput.classList.add("good");
+      parentInput.classList.remove("hidden");
+      parentInput.classList.add("visible");
+    } else {
+      parentInput.classList.add("mistake");
+      parentInput.classList.remove("good");
+      parentInput.classList.add("visible");
+    }
+  });
 }
+
+textarea.addEventListener("input", function() {
+  userText = this.value;
+});
+
+linkMailto.addEventListener("click", function() {
+  linkMailto.href = "mailto:nurjigit.melis.uulu@gmail.com?subject=" + userText;
+});
