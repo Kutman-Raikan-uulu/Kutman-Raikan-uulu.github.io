@@ -181,7 +181,35 @@ li a {
   width: 100%;
   height: auto;
 }
+
 #portfolio {
   display: flex;
+  justify-items: center;
   justify-content: center;
+  background-color: rgb(4, 3, 10);
+}
+
+#services {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+#services p,
+#services div ul li {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+  color: black;
+  font-size: 2em;
+}
+#services h1 {
+  color: black;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
 }
