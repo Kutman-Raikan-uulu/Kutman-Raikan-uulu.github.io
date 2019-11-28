@@ -7,6 +7,17 @@
     <title>Document</title>
     <link rel="stylesheet" href="main.css" />
     <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/qunit/qunit-2.9.2.css"
+    />
+    <link
       href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap"
       rel="stylesheet"
     />
@@ -19,7 +30,7 @@
           <li><a href="#about-me">about me</a></li>
           <li><a href="#portfolio">portfolio</a></li>
           <li><a href="#services">services</a></li>
-          <li><a href="#contact">contact</a></li>
+          <li><a href="#contactPage">contact</a></li>
         </ul>
       </nav>
     </div>
@@ -75,34 +86,166 @@
           </div>
         </div>
       </div>
-      <div id="services">
-        <div>
+      <div id="services" class="sec-services">
+        <div class="container-2">
           <h1>Services</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Dignissimos, aliquid quo perferendis suscipit quasi dolorem
-            perspiciatis unde, eos asperiores velit recusandae pariatur
-            laboriosam. Aliquid voluptatem, quia aut blanditiis impedit
-            perferendis?
-          </p>
-          <ul>
-            <li>my skill</li>
-            <li>my skill</li>
-            <li>my skill</li>
-            <li>my skill</li>
-            <li>my skill</li>
-          </ul>
+
+          <hr />
         </div>
       </div>
-      <div id="contact">
-        <h1>Contact</h1>
-        Consectetur quibusdam ad hic nesciunt, minima pariatur sequi quisquam
-        nam deserunt fugit ipsam delectus similique odio temporibus. Iure
-        pariatur ratione accusamus. Commodi at sed delectus molestias quia dolor
-        debitis illo!
+      <!-- <div id="contact">
+        <section class="get-in-touch">
+          <h1 class="title">Get in touch</h1>
+          <form class="contact-form row">
+            <div class="form-field col x-50">
+              <input
+                id="name"
+                class="input-text js-input"
+                type="text"
+                required
+              />
+              <label class="label" for="name">Name</label>
+            </div>
+            <div class="form-field col x-50">
+              <input
+                id="email"
+                class="input-text js-input"
+                type="email"
+                required
+              />
+              <label class="label" for="email">E-mail</label>
+            </div>
+            <div class="form-field col x-100">
+              <input
+                id="message"
+                class="input-text js-input"
+                type="text"
+                required
+              />
+              <label class="label" for="message">Message</label>
+            </div>
+            <div class="form-field col x-100 align-center">
+              <input class="submit-btn" type="submit" value="Submit" />
+            </div>
+          </form>
+        </section>
+        <p class="note">
+          Based on
+          <a
+            class="link"
+            href="http://redcollar.digital/contacts/"
+            target="blank"
+            >Red Collar Contact Form</a
+          >.
+        </p>
+      </div> -->
+      <div class="content" id="contactPage">
+        <section>
+          <div class="text-box">
+            <div class="address-box">
+              <div>
+                <h3>My address</h3>
+                <div>
+                  <i class="icon-address"></i>
+                  Country Kyrgyzstan, city Karakol
+                </div>
+                <div>
+                  <i class="icon-mail-alt"></i>
+                  nurjigit.melis.uulu@gmail.com
+                </div>
+                <div>
+                  <i class="icon-phone"></i>
+                  +996-708-339-220
+                </div>
+              </div>
+              <div class="link-box-to-social">
+                <span>
+                  <a href="https://github.com/Nurjigit-Melis-uulu">
+                    <i class="icon-github"></i>
+                  </a>
+                </span>
+                <span>
+                  <a
+                    href="https://vk.com/sanny02"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="icon-vkontakte"></i>
+                  </a>
+                </span>
+                <span>
+                  <a
+                    href="https://www.facebook.com/nurjigit.melisuulu.5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="icon-facebook-squared"></i>
+                  </a>
+                </span>
+                <span>
+                  <a href="http://" target="_blank" rel="noopener noreferrer">
+                    <i class="icon-youtube"></i>
+                  </a>
+                </span>
+                <span>
+                  <a href="http://" target="_blank" rel="noopener noreferrer">
+                    <i class="icon-pinterest"></i>
+                  </a>
+                </span>
+                <span>
+                  <a href="http://" target="_blank" rel="noopener noreferrer">
+                    <i class="icon-codepen"></i>
+                  </a>
+                </span>
+                <span>
+                  <a href="http://" target="_blank" rel="noopener noreferrer">
+                    <i class="icon-paper-plane"></i>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <form action="" method="get">
+            <h3>You can leave your contacts:</h3>
+            <div>
+              <label for="Uname">First name</label>
+              <input type="text" class="" placeholder="First name" />
+              <input type="text" id="name" placeholder="First name" />
+            </div>
+            <div>
+              <label for="Usurname">Last name</label>
+              <input type="text" class="" placeholder="Last name" />
+              <input type="text" id="surmane" placeholder="Last name" />
+            </div>
+            <div>
+              <label for="Uaddress">Address</label>
+              <input type="text" class="" placeholder="Address" />
+              <input type="text" id="address" placeholder="Address" />
+            </div>
+            <div>
+              <label for="Uemail">E-mail</label>
+              <input
+                type="email"
+                class="email"
+                id="email"
+                placeholder="Your e-mail"
+                required
+              />
+            </div>
+            <textarea
+              name="comment"
+              id="Ucomment"
+              cols="30"
+              rows="10"
+              placeholder="Write to me your comment"
+            ></textarea>
+            <button type="" id="submit">Send to me</button>
+            <a href="">Send to me</a>
+          </form>
+        </section>
       </div>
     </div>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
