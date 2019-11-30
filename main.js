@@ -1,83 +1,78 @@
-const anchors = document.querySelectorAll('a[href^="#"]');
 //----------------------------User-information----------------------------
-let username = "";
-let userSurname = "";
-let userAddress = "";
-let userEmail = "";
-let userText = "";
-//------------------------------------------------------------------------
-let menuUl = document.querySelector("#show-menu");
-let menuBox = document.querySelector(".menu-box");
-let inputFocus = document.querySelectorAll("input");
-let label = document.querySelectorAll("label");
-let email = document.querySelector(".email");
-let containerAllPages = document.querySelector(".container");
-let submitButton = document.querySelector("#submit");
-let downButton = document.querySelector("#down");
-let upButton = document.querySelector("#up");
-let translateYForcorouselInService = 0;
-let translateY = 0;
-let valueArray = 0;
-let drawer = document.querySelector("nav .drawer");
-let boll = false;
-let backDrop = document.querySelector(".back-drop");
-let body = document.querySelector("body");
-let linkInFooter = document.querySelector("footer a");
-let lineSkill = document.querySelectorAll("div.line");
-let skillsValue = document.querySelectorAll(".line div");
-let textarea = document.querySelector("form textarea");
-let linkMailto = document.querySelector("form a");
+// let username = "";
+// let userSurname = "";
+// let userAddress = "";
+// let userEmail = "";
+// let userText = "";
+// //------------------------------------------------------------------------
+// let menuUl = document.querySelector("#show-menu");
+// let menuBox = document.querySelector(".menu-box");
+// let inputFocus = document.querySelectorAll("input");
+// let label = document.querySelectorAll("label");
+// let email = document.querySelector(".email");
+// let containerAllPages = document.querySelector(".container");
+// let submitButton = document.querySelector("#submit");
+// let downButton = document.querySelector("#down");
+// let upButton = document.querySelector("#up");
+// let translateYForcorouselInService = 0;
+// let translateY = 0;
+// let valueArray = 0;
+// let drawer = document.querySelector("nav .drawer");
+// let boll = false;
+// let backDrop = document.querySelector(".back-drop");
+// let body = document.querySelector("body");
+// let linkInFooter = document.querySelector("footer a");
+// let lineSkill = document.querySelectorAll("div.line");
+// let skillsValue = document.querySelectorAll(".line div");
+// let textarea = document.querySelector("form textarea");
+// let linkMailto = document.querySelector("form a");
 
+// email.addEventListener("change", function () {
+//   email.className = "mail";
+// });
+// for (var i = 0; i < inputFocus.length; i++) {
+//   let parentInput = inputFocus[i].parentElement;
 
+//   inputFocus[i].addEve   ntListener("input", function () {
+//   inputFocus[i].addEventListener("input", function (event) {
+//     if (this.value.length > 0) {
+//       parentInput.classList.add("visible");
+//       parentInput.classList.remove("hidden");
+//     } else {
+//       parentInput.classList.add("hidden");
+//       parentInput.classList.remove("visible");
+//     }
 
+//     if (event.path[0].id == "name") {
+//       username = this.value;
+//     } else if (event.path[0].id == "surname") {
+//       userSurname = this.value;
+//     } else if (event.path[0].id == "address") {
+//       userAddress = this.value;
+//     } else if (event.path[0].id == "email") {
+//       userEmail = this.value;
+//     }
+//   });
 
+//   inputFocus[i].addEventListener("change", function () {
+//     if (this.value.length > 0) {
+//       parentInput.classList.add("good");
+//       parentInput.classList.remove("hidden");
+//       parentInput.classList.add("visible");
+//     } else {
+//       parentInput.classList.add("mistake");
+//       parentInput.classList.remove("good");
+//       parentInput.classList.add("visible");
+//     }
+//   });
 
-email.addEventListener("change", function () {
-  email.className = "mail";
-});
-for (var i = 0; i < inputFocus.length; i++) {
-  let parentInput = inputFocus[i].parentElement;
+// textarea.addEventListener('input', function () {
+//   userText = this.value;
+// });
 
-  inputFocus[i].addEventListener("input", function () {
-  inputFocus[i].addEventListener("input", function (event) {
-    if (this.value.length > 0) {
-      parentInput.classList.add("visible");
-      parentInput.classList.remove("hidden");
-    } else {
-      parentInput.classList.add("hidden");
-      parentInput.classList.remove("visible");
-    }
-
-    if (event.path[0].id == "name") {
-      username = this.value;
-    } else if (event.path[0].id == "surname") {
-      userSurname = this.value;
-    } else if (event.path[0].id == "address") {
-      userAddress = this.value;
-    } else if (event.path[0].id == "email") {
-      userEmail = this.value;
-    }
-  });
-
-  inputFocus[i].addEventListener("change", function () {
-    if (this.value.length > 0) {
-      parentInput.classList.add("good");
-      parentInput.classList.remove("hidden");
-      parentInput.classList.add("visible");
-    } else {
-      parentInput.classList.add("mistake");
-      parentInput.classList.remove("good");
-      parentInput.classList.add("visible");
-    }
-  });
-
-textarea.addEventListener('input', function () {
-  userText = this.value;
-});
-
-linkMailto.addEventListener('click', function () {
-  linkMailto.href = "mailto:nurjigit.melis.uulu@gmail.com?subject=" + userText;
-});
+// linkMailto.addEventListener('click', function () {
+//   linkMailto.href = "mailto:nurjigit.melis.uulu@gmail.com?subject=" + userText;
+// });
 
 /*
 for (let i = 0; i < links.length; i++) {
@@ -102,10 +97,7 @@ for (let i = 0; i < links.length; i++) {
 }
 */
 
-
-
-
-
+const anchors = document.querySelectorAll('a[href^="#"]');
 
 for (let anchor of anchors) {
   anchor.addEventListener("click", function(e) {
