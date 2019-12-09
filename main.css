@@ -159,197 +159,77 @@ li a {
 }
 #about-me {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   justify-items: center;
-  align-content: center;
+  align-content: space-around;
   align-items: center;
 }
-.container {
+.portfolio {
   display: flex;
-  flex-wrap: wrap;
-  justify-items: center;
-  justify-content: center;
-  width: 60%;
+  justify-content: space-around;
+  flex-direction: row;
+  align-content: space-around;
   align-items: center;
 }
-.container .col {
-  display: inline-block;
-  width: 33%;
-  height: auto;
-}
-.container .col img {
-  width: 100%;
-  height: auto;
-}
-
 #portfolio {
-  display: flex;
-  justify-items: center;
-  justify-content: center;
-  background-color: rgb(4, 3, 10);
+  background-color: white;
+}
+.portfolio div {
+  color: white;
+  background-color: rgb(133, 133, 133);
+  border: 1px solid black;
+  border-radius: 5px;
+  max-width: 400px;
+  height: 200px;
 }
 
 #services {
   position: relative;
-  display: flex;
   align-items: center;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column;
+  text-align: center;
 }
-#services p,
-#services div ul li {
+.services-block {
+  max-width: 2560px;
   display: flex;
-  justify-content: center;
-  justify-items: center;
-  align-content: center;
-  align-items: center;
-  color: black;
-  font-size: 2em;
+  flex-flow: row;
+  justify-content: space-around;
 }
 #services h1 {
   color: black;
   font-size: 2em;
-  display: flex;
-  justify-content: center;
-  justify-items: center;
-  align-content: center;
-  align-items: center;
-}
-/* }
-@import url(https://fonts.googleapis.com/css?family=Raleway:300);
-@import url(https://fonts.googleapis.com/css?family=Lusitana:400, 700);
-.align-center {
-  text-align: center;
-}
-
-.row {
-  margin: -20px 0;
-}
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.row .col {
-  padding: 0 20px;
-  float: left;
-  box-sizing: border-box;
-}
-.row .col.x-50 {
-  width: 50%;
-}
-.row .col.x-100 {
-  width: 100%;
-}
-.content-wrapper {
-  min-height: 100%;
-  position: relative;
-}
-.get-in-touch {
-  max-width: 650px;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.get-in-touch .title {
-  text-align: center;
-  font-family: Raleway, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 36px;
-  line-height: 48px;
-  padding-bottom: 48px;
-}
-.contact-form .form-field {
-  position: relative;
-  margin: 32px 0;
-}
-.contact-form .input-text {
   display: block;
-  width: 200px;
-  height: 36px;
-  border-width: 0 0 2px 0;
-  border-color: black;
-  font-family: Lusitana, serif;
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: 400;
-}
-.contact-form .input-text:focus {
-  outline: none;
-}
-.contact-form .input-text:focus + .label,
-.contact-form .input-text.not-empty + .label {
-  transform: translateY(-24px);
-}
-.contact-form .label {
-  position: absolute;
-  left: 20px;
-  bottom: 11px;
-  font-family: Lusitana, serif;
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: 400;
-  color: #888;
-  cursor: text;
-  transition: transform 0.2s ease-in-out;
-}
-.contact-form .submit-btn {
-  display: inline-block;
-  background-color: #000;
-  color: #fff;
-  font-family: Raleway, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 16px;
-  line-height: 24px;
-  padding: 8px 16px;
-  border: none;
-  cursor: pointer;
-}
-.note {
-  position: absolute;
-  left: 0;
-  bottom: 10px;
   width: 100%;
-  text-align: center;
-  font-family: Lusitana, serif;
-  font-size: 16px;
-  line-height: 21px;
 }
-.note .link {
-  color: #888;
-  text-decoration: none;
-}
-.note .link:hover {
-  text-decoration: underline;
-}
-#contact {
-  background-color: white;
-  color: black;
+#services .my-services {
   display: flex;
+  flex-flow: column;
   justify-content: center;
+  align-items: center;
   justify-items: center;
   align-content: center;
-  align-items: center;
-} */
-/*-------Contact-page-------*/
-/*------------------------------------------------------------------*/
-
-/*-------Contact-page-------*/
-/*------------------------------------------------------------------*/
-
-/*-------Contact-page-------*/
-/*------------------------------------------------------------------*/
+  border: 1px solid;
+  border-color: #ddd;
+  border-radius: 4px;
+  width: 25%;
+  height: auto;
+}
+#services .my-services img {
+  width: 80%;
+}
 
 #contactPage section {
   display: flex;
+
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
   min-height: 80vh;
 }
-#contactPage section .text-box {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 #contactPage section .text-box .address-box {
   width: 90%;
   height: 90%;
@@ -406,6 +286,14 @@ label {
 }
 .mail:valid {
   border: 2px solid limegreen;
+}
+#contactPage {
+  display: flex;
+
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
 }
 form {
   display: flex;
