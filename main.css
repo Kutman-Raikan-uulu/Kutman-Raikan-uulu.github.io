@@ -164,26 +164,36 @@ li a {
   align-content: space-around;
   align-items: center;
 }
-.portfolio {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-  align-content: space-around;
-  align-items: center;
-}
+
 #portfolio {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-content: space-around;
   background-color: white;
+  padding-top: 200px;
 }
-.portfolio div {
-  color: white;
-  background-color: rgb(133, 133, 133);
-  border: 1px solid black;
-  border-radius: 5px;
-  max-width: 400px;
-  height: 200px;
+.out-block {
+  width: 30%;
+  min-width: 200px;
+  margin: 10px;
+}
+.top-block img {
+  width: 100%;
+  height: auto;
+}
+.row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+.out-block:hover {
+  background: linear-gradient(#e66465, #9198e5);
 }
 
 #services {
+  margin-top: 100px;
   position: relative;
   align-items: center;
   display: flex;
@@ -198,6 +208,7 @@ li a {
   justify-content: space-around;
 }
 #services h1 {
+  padding-top: 100px;
   color: black;
   font-size: 2em;
   display: block;
@@ -210,7 +221,7 @@ li a {
   align-items: center;
   justify-items: center;
   align-content: center;
-  border: 1px solid;
+  border: 0px solid;
   border-color: #ddd;
   border-radius: 4px;
   width: 25%;
