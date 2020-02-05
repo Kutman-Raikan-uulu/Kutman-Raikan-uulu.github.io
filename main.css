@@ -2,6 +2,7 @@
   margin: 0px;
   padding: 0px;
 }
+
 #home {
   display: flex;
   justify-content: center;
@@ -10,7 +11,7 @@
   height: 100vh;
 }
 
-.row {
+.row-h {
   width: 40%;
 
   display: flex;
@@ -38,7 +39,7 @@ hr {
   margin: 1em 0;
   padding: 0;
 }
-.row h1 {
+.row-h h1 {
   font-size: 55px;
   color: black;
 }
@@ -186,6 +187,7 @@ li a {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
   padding: 20px 0;
 }
 .out-block:hover {
