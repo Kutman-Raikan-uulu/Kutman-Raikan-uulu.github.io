@@ -1,172 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <link rel="stylesheet" href="main.css" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
 
-    <link
-      rel="stylesheet"
-      href="https://code.jquery.com/qunit/qunit-2.9.2.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="navigation">
-      <nav>
-        <ul>
-          <li><a href="#home" class="active">home</a></li>
-          <li><a href="#about-me">about me</a></li>
-          <li><a href="#portfolio">portfolio</a></li>
-          <li><a href="#services">services</a></li>
-          <li><a href="#contactPage">contact</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div id="content">
-      <div id="home">
-        <div class="row-h">
-          <hr />
-          <h1>Welcome!</h1>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Personal site</title>
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css">
+  <link rel="shortcut icon" href="./assets/images/logo.png" type="image">
+</head>
 
-          <h1>My name's Kutman</h1>
-          <hr />
-        </div>
-      </div>
-      <div id="about-me">
-        dasd
-      </div>
-      <div id="portfolio">
-        <div class="row">
-          <div class="out-block">
-            <div class="top-block">
-              <img src="https://images.unsplash.com/photo-1539448185117-e8b970a2a739?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
-            </div>
-            <div class="bottom-block">
-              <h2>Claritas Etiam Processus</h2>
-              <h4>Photography, Nature</h4>
-            </div>
-          </div>
-          <div class="out-block">
-            <div class="top-block">
-              <img src="https://images.unsplash.com/photo-1539448185117-e8b970a2a739?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
-            </div>
-            <div class="bottom-block">
-              <h2>Claritas Etiam Processus</h2>
-              <h4>Photography, Nature</h4>
-            </div>
-          </div>
-          <div class="out-block">
-            <div class="top-block">
-              <img src="https://images.unsplash.com/photo-1539448185117-e8b970a2a739?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
-            </div>
-            <div class="bottom-block">
-              <h2>Claritas Etiam Processus</h2>
-              <h4>Photography, Nature</h4>
-            </div>
-          </div>
-          <div class="out-block">
-            <div class="top-block">
-              <img src="https://images.unsplash.com/photo-1539448185117-e8b970a2a739?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
-            </div>
-            <div class="bottom-block">
-              <h2>Claritas Etiam Processus</h2>
-              <h4>Photography, Nature</h4>
-            </div>
-          </div>
-          <div class="out-block">
-            <div class="top-block">
-              <img src="https://images.unsplash.com/photo-1539448185117-e8b970a2a739?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
-            </div>
-            <div class="bottom-block">
-              <h2>Claritas Etiam Processus</h2>
-              <h4>Photography, Nature</h4>
-            </div>
-          </div>
-          <div class="out-block">
-            <div class="top-block">
-              <img src="https://images.unsplash.com/photo-1539448185117-e8b970a2a739?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
-            </div>
-            <div class="bottom-block">
-              <h2>Claritas Etiam Processus</h2>
-              <h4>Photography, Nature</h4>
-            </div>
-          </div>
-        </div>
-       
-      </div>
-      <div id="services" class="sec-services">
+<body>
+
+  <nav>
+    <div class="nav-box">
+      <div class="logo">
         
-          <h1>Services</h1>
-          <div class="services-block">
-            <div class="my-services">
-              <img src="services-1.svg" alt="" />
-              <h3>Clean Code</h3>
-              <p>All websites are written in valid and clean HTML5 / CSS3 & JavaScript </p>
-            </div>
-            <div class="my-services"><img src="services-2.svg" alt="" />
-            <h3>Always Responsive</h3>
-            All websites are responsive. They will look great on desktop, tablets and mobile phones too.
-            </div>
-            <div class="my-services"><img src="services-4.svg" alt="" />
-              <h3>Beautiful Design</h3>
-           <p>Every website is beautiful, unique and tailored to suit your needs and requirements.</p>
-            </div>
+          <!-- <img src="./icon/logo.png"> -->
+          <h1>&lt;K&gt;</h1>
+        
+      </div>
+      <ul>
+        <li>
+          <a href="#services">Services</a>
+        </li>
+        <li>
+          <a href="#portfolio">Portfolio</a>
+        </li>
+        <li>
+          <a href="#about">About me</a>
+        </li>
+        <li>
+          <a href="#contacts">Contacts</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <header>
+      <div class="content">
+        <p>Welcome! My name is</p>
+        <h1>
+          <span>Kutman</span> Raikan uulu
+        </h1>
+
+        <p>It's my personal site.</p>
+        <h2>
+          And I am a <span>Front-End Developer</span>
+        </h2>
+        <br>
+        <a href="#about" class="link-btn btn-blue">My GitHub</a>
+        <a href="./assets/pdf/resume-of-Nurjigit.pdf" class="link-btn btn-white" target="_blank">Download Resume</a>
+      </div>
+    </header>
+    <section id="services">
+      <div class="content">
+        <div class="features">
+          <div class="feature">
+            <article>
+              <i class="fas fa-pen-nib"></i>
+              <h2>Web & App Design</h2>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing Voluptate. pariatur doloribus ratione.
+              </p>
+              <span></span>
+            </article>
+          </div>
+          <div class="feature">
+            <article>
+              <i class="fab fa-buffer"></i>
+              <h2>Development</h2>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing Voluptate. pariatur doloribus ratione.
+              </p>
+              <span></span>
+            </article>
+          </div>
+          <div class="feature">
+            <article>
+              <i class="fas fa-cog"></i>
+              <h2>Customization</h2>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing Voluptate. pariatur doloribus ratione.
+              </p>
+              <span></span>
+            </article>
+          </div>
+          <div class="feature">
+            <article>
+              <i class="fas fa-folder-open"></i>
+              <h2>Marketing</h2>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing Voluptate. pariatur doloribus ratione.
+              </p>
+              <span></span>
+            </article>
           </div>
         </div>
       </div>
-      
-      <div class="content" id="contactPage">
-        <section>
-         
-          <form action="" method="get">
-            <h3>You can leave your contacts:</h3>
-            <div>
-              <label for="Uname">First name</label>
-              <input type="text" id="name" placeholder="First name" />
-            </div>
-            <div>
-              <label for="Usurname">Last name</label>
-              <input type="text" id="surmane" placeholder="Last name" />
-            </div>
-            <div>
-              <label for="Uaddress">Address</label>
-              <input type="text" id="address" placeholder="Address" />
-            </div>
-            <div>
-              <label for="Uemail">E-mail</label>
-              <input
-                type="email"
-                class="email"
-                id="email"
-                placeholder="Your e-mail"
-                required
-              />
-            </div>
-            <textarea
-              name="comment"
-              id="Ucomment"
-              cols="30"
-              rows="10"
-              placeholder="Write to me your comment"
-            ></textarea>
-            <a href="">Send to me</a>
-          </form>
-        </section>
-      </div>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="main.js"></script>
-  </body>
+    </section>
+    <section id="portfolio">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis debitis exercitationem error quae voluptatibus
+        consectetur rerum cum ab. Blanditiis laudantium consequatur maiores vero perferendis omnis? Fugit consequuntur
+        consequatur tempore facilis.
+      </p>
+    </section>
+    <section id="contacts">
+
+    </section>
+    <section id="about">
+
+    </section>
+  </main>
+  <footer>
+
+  </footer>
+
+  <script src="./scripts/main.js"></script>
+</body>
+
 </html>
